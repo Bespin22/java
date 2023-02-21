@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      h1{
+        text-align: center;
+      }
+      li{ 
+       list-style: none;
+			 cursor: pointer; 
+			 font-size: 22px; 
+			 text-align: center; 
+      }
+    </style>
+</head>
+<body>
+  
+  <h1>Vowel</h1>
+  <ul>
+    <li onclick="backgroundColor(this)">Krishna Kumar</li>
+    <li onclick="backgroundColor(this)">Aji</li>
+    <li onclick="backgroundColor(this)">Anish</li>
+    <li onclick="backgroundColor(this)">Dinesh</li>
+    <li onclick="backgroundColor(this)">Jerish</li>
+    <li onclick="backgroundColor(this)">Jesin</li>
+    <li onclick="backgroundColor(this)">Rahul</li>
+    <li onclick="backgroundColor(this)">Varun</li>
+    <li onclick="backgroundColor(this)">Akash</li>
+    <li onclick="backgroundColor(this)"> Vishal</li>
+  </ul>
+
+  <script>
+    function backgroundColor(list) {
+      var firstLetter = list.innerHTML[0];
+      if (firstLetter == 'A' || firstLetter == 'E'  ||firstLetter == 'I' ||firstLetter == 'O' ||firstLetter == 'U') {
+        list.style.backgroundColor = "red";
+      } else {
+        list.style.backgroundColor = "green";
+      }
+    }
+    </script>
+</body>
+</html>

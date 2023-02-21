@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<style> 
+		li { 
+			cursor: pointer; 
+			font-size: 20px; 
+			text-align: center;
+	  }
+	</style> 
+</head> 
+<body> 
+	<h1><b>My Family</b></h1> 
+	<ol id="fam"> 
+		<li>Paulraj</li> 
+		<li>Rajeswari</li> 
+		<li>Anusha</li> 
+		<li>Bespin</li> 
+		<li>Rahul</li> 
+		<li>Rakesh</li> 
+		<li>Sukin</li> 
+		<li>Ajay</li> 
+		<li>Krithick</li> 
+		<li>Dharshan</li> 
+	</ol> 
+	<script> 
+		const list = document.getElementById("fam"); 
+		let count = 1; 
+		list.addEventListener("click", function(event) { 
+			const target = event.target; 
+			if (count % 2 === 0) { 
+				target.style.color = "green"; 
+			} else { 
+				target.style.color = "red"; 
+			} 
+			count++; 
+		});
+	</script> 
+</body> 
+</html
