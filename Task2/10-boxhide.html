@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 250px;
+            margin: 15px;
+            display: inline-block;
+            text-align: center;
+            font-size:28px;
+            font-weight: bold;
+            margin-top: 10%;
+        }
+        #box-1 {
+            background-color: rgb(8, 253, 0);
+        }
+        #box-2 {
+            background-color: rgb(248, 19, 19);
+        }
+        #box-3 {
+            background-color: rgb(248, 26, 156);
+        }
+        #box-4 {
+            background-color: rgb(22, 185, 235);
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-1" onclick="myFunction()">BOX-1</div>
+    <div class="box" id="box-2" onclick="myFunction()">BOX-2</div>
+    <div class="box" id="box-3" onclick="myFunction()">BOX-3</div>
+    <div class="box" id="box-4" onclick="myFunction()">BOX-4</div>
+    <script>
+        function myFunction() {
+  var a = document.getElementById("box-1");
+  if (a.style.display === "none") {
+    a.style.display = "inline-block";
+  } else {
+    a.style.display = "none";
+  }
+  var b = document.getElementById("box-2");
+  if (b.style.display === "none") {
+    b.style.display = "inline-block";
+  } else {
+    b.style.display = "hide";
+  }
+  var c = document.getElementById("box-3");
+  if (c.style.display === "none") {
+    c.style.display = "inline-block";
+  } else {
+    c.style.display = "none";
+  }
+  var d = document.getElementById("box-4");
+  if (d.style.display === "none") {
+    d.style.display = "inline-block";
+  } else {
+    d.style.display = "none";
+  }
+}
+    </script>
+</body>
+</html>

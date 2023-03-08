@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <style>
+        .box {
+            width: 80%;
+            height: 500px;
+            background-color:white;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" onclick="changeStyle(1)" ></input>
+    <input type="radio" onclick="changeStyle(2)" ></input>
+    <input type="radio" onclick="changeStyle(3)" ></input>
+    <div class="box" id="change"></div>
+    
+   
+    
+    
+    <script>
+    function changeStyle(a){
+        var element = document.getElementById("change");
+        if (a==1) {
+            element.style.backgroundColor = "blue"; 
+            }
+        else if (a==2) {
+            element.style.backgroundColor = "green";
+        } else {
+            element.style.backgroundColor = "red";
+        }
+    }
+    
+    </script>
+</body>
+</html>
+
