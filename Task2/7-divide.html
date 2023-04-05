@@ -8,25 +8,32 @@
 </head>
     <body
      style="margin: 30px">
-            From <input type="number" id="firstNumber" /><br>
-            To <input type="number" id="secondNumber" /><br>
-            divisor <input type="number" id="divide" /><br>     
-            <input type="submit" onclick="result(A, B, C)" />
-            <div class="result"></div>
+            From <input type="number" id="firstNumber" min="1"/><br><br>
+
+            To <input type="number" id="secondNumber"  max="100"/><br><br>
+
+            divisor <input type="number" id="divide" /><br><br>
+ 
+            <input type="submit" onclick="result()" />
+            <p id="result"></p>
         <script>
+            function result()
+        {
+            var arr=[]
             var A = Number(document.getElementById("firstNumber").value);
             var B = Number(document.getElementById("secondNumber").value);
             var C = Number(document.getElementById("divide").value);
-        function result(A, B, C)
-        {
-           var arr=[]
-            let counter = 0;
-            for (let i = A; i <= B; i++)
-                if (i % C === 0)
+        
+           
+            
+            for (let i = A; i <= B; i++){
+                if (i % C === 0){
                     arr.push(i);
           
         }
-          document.getElementById("result").innerHTML=result(A, B, C);
+          document.getElementById("result").innerHTML=arr;
+    }
+}
         </script>
     </body>
 </html>

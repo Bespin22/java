@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click</title>
+</head>
+<body>
+    <script>
+        let clicked = [];
+      
+        function alertText(text) {
+          clicked.push(text);
+          alert(text);
+          console.log(clicked);
+          let joinedText = clicked.join('\n');
+          alert(joinedText);
+        }
+      </script>
+      
+      <button type="button" onclick="alertText('one');">one</button>
+      <button onclick="alertText('two');">two</button>
+      <button onclick="alertText('three');">three</button>
+      <button onclick="alertText('four'); showAllText();">four</button>
+</body>
+</html>

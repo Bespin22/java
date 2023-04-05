@@ -1,86 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        button {
-  background:green;
-  position:fixed;
-  color:#fff;
-  width:50px;
-  height:50px;
-  top:50%;
-  left:50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-}
-</style>
+	<title>Color Background</title>
+	<style>
+		body {
+			background-color: white;
+		}
+		button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		#color-counts {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 10px;
+			background-color: rgba(255, 255, 255, 0.5);
+			border-radius: 5px;
+			font-size: 22px;
+			font-weight: bold;
+			color: black;
+		}
+	</style>
 </head>
 <body>
-    <div class="button">
-<button onclick="random_bg_color()">click here</button>
-<script>
-    function random_bg_color() {
-var x = Math.floor(Math.random() * 256);
-var y = Math.floor(Math.random() * 256);
-var z = Math.floor(Math.random() * 256);
-var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-console.log(bgColor);
-    }
-</Script>
-</body>
-22222222222222222222222222222222222222222222222
+	<button id="change-background-button">Change Background</button>
+	<div id="color-counts"></div>
 
-<!DOCTYPE HTML>
-<html>
-  
-<head>
-    <title>
-        How to change the background color
-        after clicking the button ?
-    </title>
-</head>
-  
-<body style="text-align:center;">
-  
-    <h1 style="color:green;">
-        GeeksforGeeks
-    </h1>
-  
-    <p id="GFG_UP" style="font-size: 16px;
-                          font-weight: bold;">
-    </p>
-  
-    <button onclick="gfg_Run()">
-        Click here
-    </button>
-  
-    <p id="GFG_DOWN" style="color:green; 
-                            font-size: 20px;
-                            font-weight: bold;">
-    </p>
-  
-    <script>
-        var el_up = document.getElementById("GFG_UP");
-        var el_down = document.getElementById("GFG_DOWN");
-        var str = "Click on button to change the background color";
-                  
-        el_up.innerHTML = str;
-                  
-        function changeColor(color) {
-            document.body.style.background = color;
-        }
-          
-        function gfg_Run() {
-            changeColor('yellow');
-            el_down.innerHTML = "Background Color changed";
-        }        
-    </script>
+	<script>
+		const colors = [
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"blue",
+			"purple",
+			"pink",
+			"brown",
+			"gray",
+			"black"
+		];
+
+		const colorCounts = {};
+		colors.forEach((color) => {
+			colorCounts[color] = 0;
+		});
+        const button = document.getElementById("change-background-button");
+		button.addEventListener("click", () => {
+			const randomIndex = Math.floor(Math.random() * colors.length);
+			const randomColor = colors[randomIndex];
+			document.body.style.backgroundColor = randomColor;
+			colorCounts[randomColor]++;
+			updateColorCounts();
+		});
+		function updateColorCounts() {
+			const colorCountsDiv = document.getElementById("color-counts");
+			colorCountsDiv.innerHTML = "";
+			colors.forEach((color) => {
+				const count = colorCounts[color];
+				const colorCountParagraph = document.createElement("p");
+				colorCountParagraph.textContent = `${color}: ${count}`;
+				colorCountsDiv.appendChild(colorCountParagraph);
+			});
+		}
+	</script>
 </body>
-  
 </html>
-333333333333333333333333333333333333333
-

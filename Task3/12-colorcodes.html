@@ -15,10 +15,18 @@
     </style>
 </head>
 <body>
-    <input type="radio" onclick="changeStyle(1)" ></input>
-    <input type="radio" onclick="changeStyle(2)" ></input>
-    <input type="radio" onclick="changeStyle(3)" ></input>
-    <div class="box" id="change"></div>
+    <center>
+    <input name="button" type="radio" onclick="changeStyle(1)" >BLUE</input>
+    <input name="button" type="radio" onclick="changeStyle(2)" >GREEN</input>
+    <input name="button" type="radio" onclick="changeStyle(3)" >BLACK</input>
+    <input name="button" type="radio" onclick="changeStyle(4)" >PINK</input>
+    <input name="button" type="radio" onclick="changeStyle(5)" >VIOLET</input>
+    <input name="button" type="radio" onclick="changeStyle(6)" >ORANGE</input>
+    <input name="button" type="radio" onclick="changeStyle(7)" >RED</input>
+    <input name="button" type="radio" onclick="changeStyle(8)" >BROWN</input>
+    <input name="button" type="radio" onclick="changeStyle(9)" >GREY</input>
+    <input name="button" type="radio" onclick="changeStyle(10)" >YELLOW</input>
+    <div class="box" id="change"></div></center>
     
    
     
@@ -31,8 +39,30 @@
             }
         else if (a==2) {
             element.style.backgroundColor = "green";
-        } else {
+        }
+        else if (a==3) {
+            element.style.backgroundColor = "black";
+        }
+        else if (a==4) {
+            element.style.backgroundColor = "pink";
+        }
+        else if (a==5) {
+            element.style.backgroundColor = "violet";
+        }
+        else if (a==6) {
+            element.style.backgroundColor = "orange";
+        }
+        else if (a==7) {
             element.style.backgroundColor = "red";
+        }
+        else if (a==8) {
+            element.style.backgroundColor = "brown";
+        }
+        else if (a==9) {
+            element.style.backgroundColor = "grey";
+        }
+        else {
+            element.style.backgroundColor = "yellow";
         }
     }
     

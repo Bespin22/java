@@ -11,44 +11,13 @@
   display: flex;
 } ></style>
 </head>
-<body class="my-auto mx-auto bg-gray-100">
-    <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
-      <div class="flex justify-center -mt-16 hidden">
-        <div class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500 flex items-center justify-center bg-white text-3xl" id="keyCodeLarge"></div>
-      </div>
-      <div>
-        <p class="text-gray-600" id="info">
-          Press any key
-        </p>
-        <p class="mt-4 text-gray-600 hidden">key: <span id="key"></span></p>
-        <p class="mt-2 text-gray-600 hidden">code: <span id="code"></span></p>
-        <p class="mt-2 text-gray-600 hidden">keyCode: <span id="keyCode"></span></p>
-        <p class="pressed">pressed keys: <span id="pressedkeys"></span></p>
-      </div>
-    </div>
-    <div id="result"><p><span id="key"></span> <span id="keyCode"></span> <span id="pressedkeys"></span></p></div>
-    <script>
-        const key = document.getElementById("key"),
-  code = document.getElementById("code"),
-  keyCode = document.getElementById("keyCode"),
-  keyCodeLarge = document.getElementById("keyCodeLarge"),
-  info = document.getElementById("info"),
-  hiddenElements = document.querySelectorAll(".hidden");
-  result=[];
-  result=document.getElementById("result")
-
-document.onkeydown = function (e) {
-  [].forEach.call(hiddenElements, function (el) {
-    el.classList.remove("hidden");
-  });
-  info.classList.add("hidden");
-  key.innerHTML = e.key;
-  code.innerHTML = e.code;
-  keyCode.innerHTML = e.keyCode;
-  keyCodeLarge.innerHTML = e.keyCode;
-  pressedkeys.innerHTML= e.result;
-
-};
-    </script>
-  </body>
+<body>
+  <p id="keys-pressed"></p>
+  <script>
+    document.addEventListener('keydown', function(event) {
+      var keysPressed = document.getElementById('keys-pressed');
+      keysPressed.innerHTML += event.key + " ";
+    });
+  </script>
+</body>
 </html>
